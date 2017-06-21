@@ -30,21 +30,21 @@ h2 {
 
 hr {
 	color: #777777;
+	margin-bottom: 20px;
 }
 
 .navBar {
 	margin: 0;
 }
 
-.container {
+.nav-container {
 	width: 960px;
 	margin: 0 auto;
 }
 
-.main {
-	margin: 20px auto;
-	clear: both;
-	flex: 1;
+.container {
+	width: 960px;
+	margin: 0 auto;
 }
 
 .logo {
@@ -56,25 +56,27 @@ hr {
 	color: white;
 }
 
-nav {
+.navMenu{
 	float: right;
+	margin:0 auto;
 }
 
-.navMenu {
-	padding-top: 25px;
+.navLinks {
+	padding: 25px 0;
+	text-align: center
 }
 
-.navMenu li {
+.navLinks li {
 	list-style: none; 
 	display: inline-block; 
 }
 
-.navMenu li a {
+.navLinks li a {
 	text-decoration: none;
 	color: #777777;
 }
 
-.navMenu li:nth-child(2) {
+.navLinks li:nth-child(2) {
 	padding: 0 15px;
 	margin: 0 15px;
 	border-left: 1px solid #666;
@@ -82,23 +84,38 @@ nav {
 }
 
 .wrapper {
+	margin: 20px auto;
+	clear: both;
+	flex: 1;
+}
+
+.main-container {
+	float: left;
+	width: 650px;
+	margin-bottom: 20px;
+}
+
+.box {
+	padding: 20px;
+	margin: 0 auto;
 	background-color: #ffffff;
 	border: 1px solid #dddddd;
 }
 
-.box {
-	padding: 15px;
-	margin: 0 auto;
-}
-
-.content {
-	float: left;
-	width: 650px;
-}
-
-.sidebar {
+.sidebar-container {
 	float: right;
 	width: 270px;
+}
+
+#main-bio, 
+#bio-img {
+	float: left;
+}
+
+#bio-img {
+	margin-right: 20px;
+	width: 250px;
+	height: auto;
 }
 
 .social {
@@ -119,19 +136,11 @@ nav {
 	height: 64px;
 }
 
-#main-bio, 
-#bio-img {
-	float: left;
+.contact {
+	line-height: 150%;
 }
 
-#bio-img {
-	margin-right: 20px;
-	width: 200px;
-	height: 200px;
-}
-
-.contact, .bio {
-	margin: 15px;
+.bio p {
 	line-height: 150%;
 }
 
@@ -240,31 +249,59 @@ button {
 /* Media Queries */
 
 @media screen and (max-width: 980px) {
-	.container {
+	.nav-container, .container {
 		width: 730px;
 	}
-	.content {
-		width: 380px;
+
+	.main-container {
+		width: 430px;
+	}
+
+	#bio-img {
+		float:none;
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 10px;
 	}
 }
 
 @media screen and (max-width: 768px) {
-	.container {
+	.nav-container, .container {
 		width: 540px;
 	}
-	.content {
+
+	.main-container {
 		width: 540px;
 	}
-	.sidebar {
+
+	.sidebar-container {
 		width: 540px;
+	}
+
+	#bio-img {
+		float: left;
+		width:250px;
+		margin-right: 20px;
 	}
 }
 
 @media screen and (max-width: 640px) {
-	.container {
-		width: 730px;
+	.nav-container {
+		width: 100%;
 	}
-	.content {
-		width: 380px;
+
+	.logo, .navMenu {
+		float: none;
 	}
+
+	.container, .main-container, .sidebar-container {
+		width: 430px;
+	}
+
+	#bio-img {
+		float:none;
+		width: 100%;
+		margin-right: 0;
+	}
+
 }
