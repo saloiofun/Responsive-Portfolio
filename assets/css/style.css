@@ -30,7 +30,7 @@ h2 {
 
 hr {
 	color: #777777;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 .navBar {
@@ -48,7 +48,7 @@ hr {
 }
 
 .logo {
-	font-size: 18px;
+	font-size: 25px;
 	float: left;
 	background-color: #4aaaa5;
 	text-align: center;
@@ -215,22 +215,29 @@ button {
 	height: 100%;
 	display: inline-block;
 	position: relative;
-	margin-bottom: 10px;
 }
 
-.row div:first-child {
+.block-left {
+	float: left;
 	margin-right: 25px;
 }
 
+.block-right {
+	float: right;
+}
+
 .block {
-	float: left;
-	width: 250px;
-	height: 200px;
 	position: relative;
+	margin: 0 auto 30px auto;
+}
+
+.feature-img {
+	width: 285px;
+	height: 200px;
 }
 
 .feature {
-	padding: 15px 0;
+	padding: 5px 0;
 	text-align: center;
 	background-color: #4aaaa5;
 	color: #fff; 
@@ -263,25 +270,44 @@ button {
 		margin-right: 0;
 		margin-bottom: 10px;
 	}
+
+	/* Portfolio */
+
+	.block-left, .block-right {
+		float: none;
+	}
+
+	.feature-img {
+		width: 100%;
+		height: auto;
+	}
+
 }
 
 @media screen and (max-width: 768px) {
-	.nav-container, .container {
-		width: 540px;
-	}
-
-	.main-container {
-		width: 540px;
-	}
-
-	.sidebar-container {
-		width: 540px;
+	.nav-container, .container, .main-container, .sidebar-container {
+		width: 640px;
 	}
 
 	#bio-img {
 		float: left;
 		width:250px;
 		margin-right: 20px;
+	}
+
+	/* Portfolio */
+
+	.block-left {
+		float: left;
+	}
+	
+	.block-right {
+		float: right;
+	}
+
+	.feature-img {
+		width: 280px;
+		height: auto;
 	}
 }
 
@@ -302,6 +328,17 @@ button {
 		float:none;
 		width: 100%;
 		margin-right: 0;
+	}
+
+	/* Portfolio */
+
+	.block-left, .block-right {
+		float: none;
+	}
+
+	.feature-img {
+		width: 100%;
+		height: auto;
 	}
 
 }
